@@ -4,6 +4,9 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   
   def hello
-    render text: "hello, world!"
+    render text: "hello, world! <a href='goodbye'>Good bye</a>"
+  end
+  def goodbye
+    render text: "<div style='direction:rtl;'>א חסיד זאָגט ניט ׳טשאַו.׳ מיר וועלן אונז ווייטער זעהן!</div>"
   end
 end
